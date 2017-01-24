@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Home</title>
-</head>
-<body>
+@extends('app')
+
+@section('content')
+
 	<h1>Home page</h1>
-</body>
-</html>
+	
+@stop
