@@ -8,26 +8,19 @@
 <body>
 	<div class="container">
 
-
-		<nav class="navbar fixed-top navbar-light bg-faded">
-
-	        <a class="navbar-brand" href="{{ url('/') }}">Laravel Test Project</a>
-{{-- 
-	    	<div class="collapse navbar-collapse">
-	            <ul class="navbar-nav">
-	                <li class="nav-item"><a class="nav-link" href="{{ url('/articles') }}">Articles</a></li>
-	                <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">About</a></li>
-	                <li class="nav-item"><a class="nav-link" href="https://laravel-news.com">News</a></li>
-	                <li class="nav-item"><a class="nav-link" href="{{ url('/contact') }}">Contact</a></li>
-	                <li class="nav-item"><a class="nav-link" href="https://github.com/happybirdw/lavarel-test-project">GitHub</a></li>
-	            </ul>
-        	</div>
- --}}
-        </nav>
+		@if (Session::has('flash_message'))
+			<div class="alert alert-success">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				{{ Session::get('flash_message') }}
+			</div>
+		@endif
 
 		@yield('content')
 
 	</div>
+
+	<script src="//code.jquery.com/jquery.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.js"></script>
 
 	@yield('footer')
 </body>

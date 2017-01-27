@@ -1,16 +1,17 @@
-@extends('app')
+@extends('layouts.app')
 
 @section('content')
+	<div class="container">
+		<h1>Write a New Article</h1>
 
-	<h1>Write a New Article</h1>
+		<hr/>
 
-	<hr/>
+		{{ Form::model($article = new \App\Article, ['url' => 'articles']) }}
 
-	{{ Form::open(['url' => 'articles']) }}
+			@include ('articles.form', ['submitButtonText' => 'Add Article'])
 
-		@include ('articles.form', ['submitButtonText' => 'Add Article'])
+		{{ Form::close() }}
 
-	{{ Form::close() }}
-
-	@include ('errors.list')
+		@include ('errors.list')
+	</div>
 @stop
