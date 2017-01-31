@@ -45,6 +45,7 @@
                     <ul class="nav navbar-nav">
             
                         <li class="nav-item"><a class="nav-link" href="{{ url('/articles') }}">Articles</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url('/illustre') }}">L'illustré</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url('/contact') }}">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="https://github.com/happybirdw/lavarel-test-project">GitHub</a></li>
@@ -87,6 +88,12 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
+    <script 
+          src="https://code.jquery.com/jquery-3.1.1.min.js"
+          integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+          crossorigin="anonymous"></script>
+ 
+
+    <script src="/js/test.js"></script>
 </body>
 </html>

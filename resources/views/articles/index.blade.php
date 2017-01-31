@@ -2,21 +2,13 @@
 
 @section('content')
 	<div class="container">
-				<h1>Articles</h1>
+		<h1 class="text-center">Articles</h1>
 	    <div class="row">
 	        <div class="col-md-6">
-				<a href="{{ url('/articles/create') }}" >
-					Create an article
-				</a>
-			</div>
-
-	        <div class="col-md-6">
-        	    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		    		Tags 
-		    		<span class="caret"></span>
-		  		</button>
+        	    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+		    		<h4>Sort by Tags <span class="caret"></span></h4>
+		  		</a>
 		        <ul class="dropdown-menu">
-		        	{{-- <li>{{ $tags }}</li> --}}
 
 					@foreach ($tags as $tag)
 						<li>
@@ -27,9 +19,14 @@
 					@endforeach
 				</ul> 
 			</div>		
+	        <div class="col-md-3 col-md-offset-3">
+				<a class="btn btn-default btn-lg" role="button" href="{{ url('/articles/create') }}" >
+					Create an article
+				</a>
+			</div>
 		</div>	
 						
-				<hr/>
+		<hr/>
 
 		@foreach ($articles as $article)
 

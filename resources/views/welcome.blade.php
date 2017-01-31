@@ -85,7 +85,7 @@
                 <div class="links">
                     <a href="{{ url('/articles')}}">Articles</a>
                     <a href="{{ url('/about') }}">About</a>
-                    <a href="https://laravel-news.com">News</a>
+                    <a href="{{ url('/illustre') }}">L'illustré</a>
                     <a href="{{ url('/contact') }}">Contact</a>
                     <a href="https://github.com/happybirdw/lavarel-test-project">GitHub</a>
                 </div>
